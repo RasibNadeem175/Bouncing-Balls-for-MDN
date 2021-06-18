@@ -21,14 +21,14 @@ function Ball(x, y, velX, velY, color, size) {
   this.color = color;
   this.size = size;
 }
-
+// function to draw the circle based on their set x, y, size, and color attributes
 Ball.prototype.draw = function draw() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
 };
-
+// function to update the the x, y position with their respective x, y velocities each callback
 Ball.prototype.update = function update() {
   if ((this.x - this.size) >= width) {
     this.velX = -(this.velX);
@@ -49,7 +49,7 @@ Ball.prototype.update = function update() {
 }
 
 let balls = [];
-
+//Until we get 25 balls, keep making new balls with random random position (inside the screen), random size, random velocity and color.
 while (balls.length < 25) {
   let size = random(10, 20);
   let ball = new Ball(
@@ -65,6 +65,7 @@ while (balls.length < 25) {
 
   balls.push(ball);
 }
+//This function will encapsulate the processes that we need to run at every repaint of the browser screen.
 function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
