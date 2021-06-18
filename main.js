@@ -44,7 +44,6 @@ Ball.prototype.update = function update() {
     this.velY = -(this.velY);
   }
   this.x += this.velX;
-  console.log(this.velX);
   this.y += this.velY;
 }
 

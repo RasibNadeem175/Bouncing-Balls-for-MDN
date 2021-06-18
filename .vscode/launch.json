@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "request": "launch",
+            "type": "vscode-edge-devtools.debug",
+            "url": "E:/VisualStudioProjects/web-projects/bouncing-ball/index.html" // Provide your project's url to finish configuring
+        }
+    ]
+}
